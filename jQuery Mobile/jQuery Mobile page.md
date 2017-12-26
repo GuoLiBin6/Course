@@ -40,7 +40,6 @@
 </body>
 ```
 + ### 多容器页面
-
 给标明page的标签添加 ==id== 属性区分不同的页面。默认只显示第一个页面,通过a标签href值为id值，进行页面切换。
 
 ```
@@ -51,8 +50,7 @@
         </div>
         <div data-role = "content">
             <p> page content</p>
-            <a href = "#pagetwo">切换第二个页面</a>
-        </div>
+            <a href = "#pagetwo">切换第二个页面</a>        </div>
         <div data-role = "footer">
             <h4>&copy;开源社区</h4>
         </div>
@@ -73,10 +71,9 @@
 ```
 
 上述方法只能在同一个html的不同页面间跳转，若链接外部页面，需增加属性 ==rel = “external”==
-
 ```
 <a href = "a.html" rel = "external">Go to another html</a>
-```
+l```
 ## 页面切换效果
 
 给要进行页面切换的链接或表单提交增加 ==data-transition = ""== 属性，实现不同的页面切换效果
@@ -106,7 +103,7 @@ none | 没有效果
 ```
 ## 对话框
 
-在链接元素中添加 ==data-role=“dialog”== 属性，打开的页面以对话框形式呈现。
+l在链接元素中添加 ==data-rel=“dialog”== 属性，打开的页面以对话框形式呈现。
 
 打开的页面可以是外部页面也可以是一个page，页面切换效果可以改变。
 

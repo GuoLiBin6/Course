@@ -1,0 +1,11 @@
+<div>
+  <p>正在进行</p>
+  <ul>
+    <li *ngFor = "let i of mytodolistArr;let idx = index"><input type="checkbox" (click)="moveING(idx)">{{i}}<input type="button" value="删除" (click)="rmING(idx)"></li>
+  </ul>
+  <p>已经完成</p>
+  <ul>
+      <li *ngFor = "let i of mytodolistArred;let idx = index"><input type="checkbox" checked="checked" (click)="moveED(idx)">{{i}}<input type="button" value="删除" (click)="rmED(idx)"></li>
+    
+  </ul>
+</div>

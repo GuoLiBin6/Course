@@ -1,0 +1,31 @@
+div{
+    width:700px;
+    margin: 0 auto;
+
+}
+p{
+    font-size: 25px;
+    font-family: '微软雅黑';
+    font-weight: bolder;
+}
+li{
+    list-style-type: none;
+    display: block;
+    border-radius: 5px;
+    height: 40px;
+    margin: 3px;
+    background-color: papayawhip;
+    font-size: 20px;
+}
+input[type='checkbox']{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+input[type='button']{
+    float: right;
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 5px 5px;
+}

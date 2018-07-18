@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="https://guolibin6.github.io/source/favicon/favicon.ico">
+    <title>underscore template初体验</title>
+
+    <!-- 引入依赖资源 -->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/underscore.js/1.7.0/underscore-min.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <div class="variable"></div>
+    <div class="value"></div>
+    <div class="expression"></div>
+</body>
+<script>
+    $(function(){ 
+        //初始模板函数     
+        var compiled = _.template("hello: <%= name %>");  // 使用模板函数，模板格式为 hello：name
+        $('#container').html(compiled({name: 'moe'}));    // 用 {name: 'moe'} 来填充模板函数，并显示在页面上 
+
+        //模板函数的插入形式
+        // 1.插入变量 <%= var %>
+        var variable = _.template("hello <%= name %>");
+        $('.variable').html(variable({name: 'variable'}));
+
+        //2.插入值，并用HTML进行转义 <%- value %>
+        var value = _.template("<b><%- val %></b>");
+        $('.value').html(value({val:'<li>2</li>'}));
+
+        //3.插入js代码 <% 语句 %?
+        var expression = _.template("<% alert('hello') %>");
+        expression();
+
+        //4.将HTML模板作为参数
+        var html_template = _.template("<ul><li>1</li><li>2</li></ul>");
+        $('.expression').html(html_template());
+    });
+</script>
+</html>

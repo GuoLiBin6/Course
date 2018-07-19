@@ -1,0 +1,152 @@
+page-home {
+    *{
+        margin: 0!important;
+        padding: 0!important;
+        text-decoration: none!important;
+    }
+   
+    ion-title img{
+        width: 9rem;
+    }
+    .header-icon{
+        float: right;
+        padding: 10px!important;
+    }
+    ion-slides{
+        height: auto;
+    }
+    .segment-button{
+        color: #fedb47;
+        border:none !important;
+    }
+    // .search-border{
+    //     background-color: #fedb47!important;
+    //     color: black!important;
+    // }
+    .search-grid{
+        margin-top: 5px!important;
+    }
+    .search-grid ion-item{
+        text-align: center;
+        padding: 1rem!important;
+        border: solid 1px #e2e2e2;
+    }
+    .search-grid ion-item img{
+        width: 3rem;   
+        margin-bottom: 1rem!important;
+            
+    }
+    .search-grid ion-item {
+        color: black;
+        text-decoration: none;
+        border: none;
+    }
+
+    //灰色背景
+    .gray-bgco{
+        width: 100%;
+        height: 1rem;
+        background-color:#e2e2e2;
+    }
+    //优质信息
+    .great-info{
+        height: 5rem;
+    }
+    .great-info img{
+        float: left;
+        height: 3rem;
+        margin-top: 1rem !important;
+    }
+    .great-info span{
+        float: left;
+        font-size: 2rem;
+        height: 5rem;
+        line-height: 5rem;
+    }
+    //资产包转让列表
+    .apt-item{
+        width: 100%;
+        height: 7rem;
+        position: relative;
+    }
+    .apt-item img{
+        height: 5rem;
+        margin: 1rem 2rem!important;
+    }
+    .apt-title{
+        border-bottom: solid 1px #e2e2e2;
+        border-top: solid 1px #e2e2e2;
+        
+    }
+    .apt-title span{
+        font-size: 1.2rem;
+    }
+    .apt1{
+        padding-left: 2rem !important;
+    }
+    .apt2{
+        color:grey;
+    }
+    .apt-item1{
+        
+        width: 10rem;
+        height: 5rem;
+        position: absolute;
+        left: 8rem;
+        top: 1rem;
+    }
+    .apt-item2{
+        width: 8rem;
+        height: 5rem;
+        position: absolute;;
+        left: 18rem;
+        top:1rem;
+    }
+    .apt-item3{
+        width: 10rem;
+        height: 5rem;
+        position: absolute;;
+        left: 26rem;
+        top:1rem;
+    }
+    .apt-item4{
+        width: 5rem;
+        height: 5rem;
+        position: absolute;;
+        left: 36rem;
+        top:1rem;
+    }
+    .apt-item1 li{
+        font-size: 1.3rem;
+        width: 4rem;
+        height: 1.6rem;
+        float: left;
+    }
+    .apt-item1-gray{
+        color: grey;
+        font-size: 1.3rem;
+    }
+    .apt-item1-red{
+        color: #c01444;
+        font-size: 2rem;
+    }
+    .apt-item4 img{
+        height: 2rem;
+        margin-top: 1.5rem!important;
+    }
+    // tabs
+    // ion-toolbar{
+    //     margin-top: 5px!important;
+        
+    // }
+    ion-tabs{
+        // margin-top: 3px!important;
+    }
+    .shouye-on{
+        background: url(../../assets/imgs/icon-index-black.png) no-repeat center top;
+    }
+    .shouye-off{
+        background: url(../../assets/imgs/icon-index-black.png) no-repeat center top;
+    }
+
+}

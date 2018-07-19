@@ -1,0 +1,163 @@
+<ion-header no-border>
+  <ion-toolbar color="yel">
+    <button ion-button menuToggle="left">
+      <ion-icon name="ios-menu"></ion-icon>
+    </button>
+    <ion-title>
+      <img src="../../assets/imgs/ziya-logo.png" alt="">
+    </ion-title>
+    <ion-icon name="ios-discover" class="header-icon" large></ion-icon>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-slides>
+    <ion-slide>
+      <img src="../../assets/imgs/slide1.jpg" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/imgs/slide1.jpg" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/imgs/slide1.jpg" alt="">
+    </ion-slide>
+  </ion-slides>
+  <ion-segment [(ngModel)]="icons" color="yel">
+    <ion-segment-button value="search-info" class="search-border">
+      找信息
+    </ion-segment-button>
+    <ion-segment-button value="search-serve">
+      找服务
+    </ion-segment-button>
+  </ion-segment>
+
+
+  <div class="search-grid" [ngSwitch]="icons">
+    <ion-grid *ngSwitchCase="'search-info'">
+      <ion-row>
+        <ion-col ion-3>
+          <ion-item>
+            <img src="../../assets/imgs/homeSearch1.png" alt="">
+            <p>资产包转让</p>
+          </ion-item>
+        </ion-col>
+        <ion-col ion-3>
+          <ion-item>
+            <img src="../../assets/imgs/homeSearch2.png" alt="">
+            <p>股权转让</p>
+          </ion-item>
+        </ion-col>
+        <ion-col ion-3>
+          <ion-item>
+            <img src="../../assets/imgs/homeSearch3.png" alt="">
+            <p>固产转让</p>
+          </ion-item>
+        </ion-col>
+        <ion-col ion-3>
+          <ion-item>
+            <img src="../../assets/imgs/homeSearch4.png" alt="">
+            <p>商业保理</p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col ion-3>
+          <ion-item>
+            <img src="../../assets/imgs/homeSearch5.png" alt="">
+            <p>典当担当</p>
+          </ion-item>
+        </ion-col>
+        <ion-col ion-3>
+          <ion-item>
+            <img src="../../assets/imgs/homeSearch6.png" alt="">
+            <p>融资借贷</p>
+          </ion-item>
+        </ion-col>
+        <ion-col ion-3>
+          <ion-item>
+            <img src="../../assets/imgs/homeSearch7.png" alt="">
+            <p>悬赏信息</p>
+          </ion-item>
+        </ion-col>
+        <ion-col ion-3>
+          <ion-item>
+            <img src="../../assets/imgs/homeSearch8.png" alt="">
+            <p>尽职调查</p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div [ngSwitch]="icons">
+    <ion-list *ngSwitchCase="'search-serve'">
+      <ion-item>
+        b
+      </ion-item>
+      <ion-item>
+        b
+      </ion-item>
+    </ion-list>
+  </div>
+  <div class="gray-bgco"></div>
+  <div class="great-info">
+    <img src="../../assets/imgs/greatInfo.png" alt="">
+    <span>优质信息</span>
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <div class="apt-title">
+        <span class="apt1">{{item.title}}</span>
+        <span class="apt2">--FB001</span>
+      </div>
+      <div class="apt-item">
+        <img src={{item.imgURL}} alt="">
+        <div class="apt-item1">
+          <li>{{item.place}}</li>
+          <li class="apt-item1-gray">{{item.placeVal}}</li>
+          <li>{{item.source}}</li>
+          <li class="apt-item1-gray">{{item.sourceVal}}</li>
+          <li>{{item.type}}</li>
+          <li class="apt-item1-gray">{{item.typeVal}}</li>
+
+
+        </div>
+        <div class="apt-item2">
+          <li class="apt-item1-red">{{item.amountVal}}</li>
+          <li class="apt-item1-gray">{{item.amount}}</li>
+        </div>
+        <div class="apt-item3">
+          <li class="apt-item1-red">{{item.proVal}}</li>
+          <li class="apt-item1-gray">{{item.proportion}}</li>
+        </div>
+        <div class="apt-item4">
+          <img src="../../assets/imgs/triangle-right.png" alt="">
+        </div>
+      </div>
+      <div class="gray-bgco"></div>
+
+    </ion-item>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+
+</ion-content>
+<ion-footer>
+
+    <ion-toolbar>
+      <ion-tabs>
+        <ion-tab tabIcon="ios-indexIcon-outline" [root]="tabRoot1" tabTitle="首页"></ion-tab>
+        <ion-tab tabIcon="ios-publicIcon-outline" [root]="tabRoot1" tabTitle="发布"></ion-tab>
+        <ion-tab tabIcon="ios-discoverIcon-outline" [root]="tabRoot1" tabTitle="查看"></ion-tab>
+        <ion-tab tabIcon="ios-messageIcon-outline" [root]="tabRoot1" tabTitle="消息"></ion-tab>
+        <ion-tab tabIcon="ios-mineIcon-outline" [root]="tabRoot1" tabTitle="我的"></ion-tab>
+        
+      </ion-tabs>
+    </ion-toolbar>
+
+</ion-footer>

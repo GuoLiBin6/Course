@@ -1,0 +1,19 @@
+<!-- <ul>
+  <li *ngFor="let item of list" (click)="goGood(item)">
+    {{item}}
+    <a routerLink="{{'/good/'+item}}">点击</a>
+  </li>
+</ul> -->
+
+<div id="goodlist_content">
+  <ul>
+    <li *ngFor="let item of goodList;let idx = index" (click)="goGood(idx)">
+      <img src={{goodList[idx].goodsListImg}} alt="">
+      <div></div>
+      <p>{{goodList[idx].goodsName}}
+      </p>
+      <span>￥{{goodList[idx].price}}</span>
+    </li> 
+  </ul>
+</div>
+ 
